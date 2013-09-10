@@ -1,0 +1,31 @@
+
+body {
+	padding-bottom: 40px;
+	padding-top: 60px;
+}
+#footer {
+	background-color: #F5F5F5;
+}
+#push, #footer {
+	height: 60px;
+}
+
+.linenums {
+    border: 1px solid #E1E1E8;
+    padding: 8px;
+    background-color: #F7F7F9;
+    border-radius: 4px 4px 4px 4px;
+}
+.row-fluid{
+	margin-bottom:20px;
+}
+.table{
+	background-color: #FFF;
+}
+.control-group{
+	width:30%;
+	float:left;
+}
+#visit_check{
+	margin-top:25px;
+}
