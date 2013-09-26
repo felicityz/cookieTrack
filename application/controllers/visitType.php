@@ -23,7 +23,7 @@ class VisitType extends CI_Controller{
     public function getTypeData($start,$end){
         $getTypeData = $this ->  VisitTypeModel -> getVisitType($start,$end); 
         
-        $i = 1;        
+        $i = 0;        
         
 
         foreach($getTypeData as $val){
@@ -33,8 +33,9 @@ class VisitType extends CI_Controller{
 
            $arr['num'.$i] = $val['num'];
            
-           ++$i;
+           $i++;
         }
+        $arr['numTotal'] = $i;
 
         echo json_encode($arr);
 

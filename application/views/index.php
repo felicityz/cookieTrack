@@ -110,14 +110,14 @@ $(function () {
                     }
                 },
                 title: {
-                    text: '注册人数',
+                    text: '访问人数',
                     style: {
                         color: '#89A54E'
                     }
                 }
             }, { // Secondary yAxis
                 title: {
-                    text: '访问人数',
+                    text: '注册人数',
                     style: {
                         color: '#4572A7'
                     }
@@ -148,17 +148,17 @@ $(function () {
                 backgroundColor: '#FFFFFF'
             },
             series: [{
-                name: '访问人数',
+                name: '注册人数',
                 color: '#4572A7',
                 type: 'column',
                 yAxis: 1,
-                data: [<?php echo rtrim(implode(",",$visitWeekNum),",");?>]
+                data: [<?php echo rtrim(implode(",",$regWeekNum),",");?>]
     
             }, {
-                name: '注册人数',
+                name: '访问人数',
                 color: '#89A54E',
-                type: 'spline',
-                data: [<?php echo rtrim(implode(",",$regWeekNum),",");?>]
+                type: 'spline',                
+                data: [<?php echo rtrim(implode(",",$visitWeekNum),",");?>]
             }]
         });
     });

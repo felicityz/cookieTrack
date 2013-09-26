@@ -5,6 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="/application/data/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="/application/data/css/datetimepicker.css" rel="stylesheet" media="screen">
+<link href="/application/data/css/messenger.css" rel="stylesheet" media="screen">
+<link href="/application/data/css/messenger-theme-future.css" rel="stylesheet" media="screen">
 <link href="/application/data/css/mystyle.css" rel="stylesheet" media="screen">
 <script type="text/javascript" src="/application/data/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="/application/data/js/bootstrap.min.js"></script>

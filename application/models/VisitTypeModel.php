@@ -17,6 +17,8 @@ class VisitTypeModel extends CI_Model {
 
         $sql = "SELECT count(*) as num,`refer`.type FROM `v_user` LEFT JOIN `refer` ON `v_user`.refer = `refer`.id ".$where." GROUP BY `type`";
 
+        //echo $sql;exit;
+
         $query = $this -> db -> query($sql);
 
         return $query -> result_array();

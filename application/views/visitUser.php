@@ -27,7 +27,7 @@
             			
 			<div class="row-fluid linenums">
 				<h4>访问网站最多的用户</h4>				
-                <table class="table table-bordered table-hover">
+                <table id="visitMost" class="table table-bordered table-hover">
                     <tr>
                         <th>序号</th>
                         <th>数据库ID</th>
@@ -38,45 +38,12 @@
                     </tr>
                     <tr>                        
                         <td>1</td>
-                        <td>12</td>
-                        <td>517cd37cd759c93</td>  
-                        <td>20</td> 
-                        <td>2013-04-28 15:38:23</td>
+                        <td>loading....</td>
+                        <td>loading....</td>  
+                        <td>loading....</td> 
+                        <td>loading....</td>
                         <td><a href="#" class="btn btn-small btn-primary">详细情况</a></td>                   
                     </tr>
-                    <tr>                        
-                        <td>2</td>
-                        <td>12</td>
-                        <td>517cd37cd759c93</td>  
-                        <td>20</td> 
-                        <td>2013-04-28 15:38:23</td>
-                        <td><a href="#" class="btn btn-small btn-primary">详细情况</a></td>                   
-                    </tr>
-                    <tr>                        
-                        <td>3</td>
-                        <td>12</td>
-                        <td>517cd37cd759c93</td>  
-                        <td>20</td> 
-                        <td>2013-04-28 15:38:23</td>
-                        <td><a href="#"  class="btn btn-small btn-primary">详细情况</a></td>                   
-                    </tr>
-                    <tr>                        
-                        <td>4</td>
-                        <td>12</td>
-                        <td>517cd37cd759c93</td>  
-                        <td>20</td> 
-                        <td>2013-04-28 15:38:23</td>
-                        <td><a href="#" class="btn btn-small btn-primary">详细情况</a></td>                   
-                    </tr>
-                    <tr>                        
-                        <td>5</td>
-                        <td>12</td>
-                        <td>517cd37cd759c93</td>  
-                        <td>20</td> 
-                        <td>2013-04-28 15:38:23</td>
-                        <td><a href="#"  class="btn btn-small btn-primary">详细情况</a></td>                   
-                    </tr>                   
-
                     
                 </table>
 			</div> 
@@ -87,6 +54,7 @@
 		
 	</div>
 </div>
+
 <!--内容-->
 <script type="text/javascript" src="/application/data/js/bootstrap-datetimepicker.js"></script>
 <script type="text/javascript" src="/application/data/js/locales/bootstrap-datetimepicker.fr.js"></script>
@@ -101,4 +69,16 @@ $('.form_date').datetimepicker({
     minView: 2,
     forceParse: 0
 });
+$(function(){
+    getVisitData(0,'<?php  echo date("Y-m-d"); ?>');
+});
+function getVisitData(start,end){
+    $.get("/index.php/visitUser/getData/"+start+"/"+end,function(data){
+
+        var inhtml = '<tr><th>序号</th><th>数据库ID</th><th>用户ID</th><th>访问次数</th><th>最后访问时间</th><th>查看详情</th></tr>'+data;
+
+        $("#visitMost").html(inhtml);
+
+    });
+}
 </script>
